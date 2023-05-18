@@ -16,6 +16,7 @@
     --font-38: 38px;
     --font-22: 22px;
     --font-18: 18px;
+    --font-14: 14px;
 }
 
 .container {
@@ -87,10 +88,30 @@
 
 .language {
     display: flex;
-    gap: 15px;
+    /*gap: 10px;*/
+    align-items: center;
     position: absolute;
-    top: 40px;
-    right: 90px;
+    top: 10%;
+    right: 15%;
+    font-size: var(--font-14);
+    /*height: 50px;*/
+}
+
+.language .ru,
+.language .en {
+    padding: 10px;
+}
+
+.language .ru:hover,
+.language .en:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.active {
+    color: var(--color-blue);
+    background: var(--color-white);
+    border-radius: 50%;
 }
 
 .investments {
