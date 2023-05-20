@@ -128,7 +128,6 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    /*justify-content: space-between;*/
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -227,6 +226,7 @@
 .broker_help .box {
     height: 140px;
     padding: 10px;
+    border-radius: 30px;
 }
 
 .broker_help .box_icon {
@@ -322,18 +322,132 @@
         height: auto;
     }
 
-    .btn {
-        width: 90%;
+    .main_page .description {
+        font-size: 3vw;
+    }
+
+    .left_side {
+        padding: 5vw;
+    }
+
+    .left_side span {
+        padding-left: 2vw;
     }
     
     .bottom_block {
         position: initial;
         transform: initial;
+        grid-template-columns: repeat(2, 30%);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        left: initial;
+        padding: 2% 0 5%;
+        background: var(--color-primary);
+    }
+
+    .bottom_block .blocks {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding-top: 0;
+        box-shadow: none;
+    }
+
+    .bottom_block .title {
+        font-size: 2vw;
     }
 
     .language {
         top: 5%;
         right: 5%;
+    }
+
+    .investments {
+        margin-top: 5vw;
+    }
+
+    .investments .title {
+        grid-column: 1;
+        font-size: 5vw;
+    }
+
+    .investments .text .subtitle {
+        font-size: 4vw;
+    }
+
+    .investments .text .description {
+        font-size: 2.5vw;
+    }
+
+    .broker_help {
+        margin-top: 5vw;
+        grid-template:
+            "text text"
+            "box-1 box-2"
+            "box-3 box-4"
+            / 50% 1fr;
+        grid-gap: 4%;
+    }
+
+    .broker_help .broker_title {
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .broker_help .broker_description {
+        text-align: center;
+        font-size: 2.5vw;
+    }
+
+    .broker_help_text {
+        margin-bottom: 4vw;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .broker_help .box {
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 6px 4px 12px;
+    }
+
+    .broker_help .box:hover {
+        box-shadow: rgba(0, 0, 0, 0.5) 6px 4px 12px;
+    }
+
+    .broker_help .box_text {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 567px) {
+    .bottom_block {
+        grid-template-columns: 40%;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .broker_help {
+        grid-template:
+            "text"
+            "box-1"
+            "box-2"
+            "box-3"
+            "box-4";
+        justify-items: center;
+    }
+
+    .broker_help .box {
+        width: 60%;
+        padding-left: 5vw;
+    }
+
+    .broker_help .box_text {
+        font-size: 2.8vw;
     }
 }
 
