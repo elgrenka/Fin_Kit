@@ -12,10 +12,12 @@
     --color-white: #fff;
     --color-black: #000;
     --color-blue: #0962e8;
+    --color-light-blue: #e9f6ff;
     --color-back: #eff9ff;
     --font-64: 64px;
     --font-38: 38px;
     --font-22: 22px;
+    --font-20: 20px;
     --font-18: 18px;
     --font-16: 16px;
     --font-14: 14px;
@@ -157,19 +159,63 @@
 }
 
 .investments {
-    margin-top: 100px;
+    width: 80%;
+    margin: 140px auto 0;
+    display: grid;
+    grid-gap: 20px;
 }
 
 .investments .title {
-    background: chocolate; /* delete */
+    grid-column: 1 / 3;
+    grid-row: 1;
     font-size: var(--font-38);
-    width: 753px;
-    height: 98px;
+    font-weight: 500;
+    line-height: 1.3;
     margin: 0 auto;
     text-align: center;
+    padding: 10px;
+}
+
+.investments .title span {
+    color: var(--color-blue);
+}
+
+.investments .research,
+.investments .advising {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-light-blue);
+    border-radius: 30px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.investments .text,
+.investments .image {
+    flex: 1;
+}
+
+.investments .text .subtitle {
+    font-size: var(--font-20);
+    font-weight: 600;
+    margin: 15px auto;
+    line-height: 1.4;
+}
+
+.investments .text .description {
+    font-size: var(--font-14);
+    line-height: 1.4;
+}
+
+.investments .image img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .broker-help {
+    display: grid;
+    margin-top: 140px;
     background: darkcyan; /* delete */
 }
 
