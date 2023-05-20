@@ -27,10 +27,10 @@
     position: relative;
     max-width: 1100px;
     padding: 0 60px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 
-.main-page {
+.main_page {
     background: var(--color-primary);
     height: 500px;
     display: flex;
@@ -38,24 +38,24 @@
     align-items: center;
 }
 
-.left-side {
+.left_side {
     flex: 40%;
     padding: 10px 30px 10px 60px;
 }
 
-.left-side .title {
+.left_side .title {
     font-size: var(--font-64);
     font-weight: 700;
     line-height: 1.3;
 }
 
-.left-side .description {
+.left_side .description {
     font-size: var(--font-22);
     font-weight: 400;
     line-height: 1.3;
 }
 
-.left-side span {
+.left_side span {
     display: inline-block;
     background: var(--color-white);
     width: 122px;
@@ -81,26 +81,25 @@
 
 .btn:hover {
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 4px 4px;
 }
 
-.right-side {
+.right_side {
     flex: 60%;
     position: relative;
 }
 
-.right-side img {
+.right_side img {
     width: 110%;
 }
 
 .language {
     display: flex;
-    /*gap: 10px;*/
     align-items: center;
     position: absolute;
     top: 10%;
     right: 15%;
     font-size: var(--font-14);
-    /*height: 50px;*/
 }
 
 .language .ru,
@@ -120,7 +119,7 @@
     border-radius: 50%;
 }
 
-.bottom-block {
+.bottom_block {
     position: absolute;
     top: 440px;
     left: 50%;
@@ -133,7 +132,8 @@
     gap: 10px;
 }
 
-.bottom-block .blocks {
+.bottom_block .blocks {
+    display: flex;
     font-size: var(--font-16);
     font-weight: 500;
     line-height: 1.4;
@@ -144,22 +144,22 @@
     box-shadow: rgba(0, 0, 0, 0.1) 6px 4px 12px ;
 }
 
-.blocks {
-    display: flex;
+.bottom_block .blocks:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 6px 4px 12px ;
 }
 
-.bottom-block .icon {
+.bottom_block .icon {
     align-self: flex-start;
     background: var(--color-back);
     border-radius: 50%;
 }
 
-.bottom-block i {
+.bottom_block i {
     color: var(--color-blue);
 }
 
 .investments {
-    width: 80%;
+    width: 90%;
     margin: 140px auto 0;
     display: grid;
     grid-gap: 20px;
@@ -171,7 +171,7 @@
     font-size: var(--font-38);
     font-weight: 500;
     line-height: 1.3;
-    margin: 0 auto;
+    margin: 0 10%;
     text-align: center;
     padding: 10px;
 }
@@ -187,7 +187,7 @@
     background: var(--color-light-blue);
     border-radius: 30px;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 10px 0;
 }
 
 .investments .text,
@@ -213,10 +213,76 @@
     height: 100%;
 }
 
-.broker-help {
+.broker_help {
     display: grid;
-    margin-top: 140px;
-    background: darkcyan; /* delete */
+    grid-template:
+        "text box-1 box-2"
+        "text box-3 box-4"
+        / 55% 1fr 1fr;
+    margin: 140px auto 0;
+    width: 90%;
+}
+
+.broker_help .box {
+    height: 140px;
+    padding: 10px;
+}
+
+.broker_help .box_icon {
+    height: 40%;
+}
+
+.broker_help .icons {
+    background: var(--color-back);
+    border-radius: 50%;
+}
+
+.broker_help .icons:before {
+    color: var(--color-blue);
+}
+
+.broker_help .box_text {
+    font-size: var(--font-14);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.broker_help .broker_title {
+    font-size: var(--font-38);
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.broker_help .broker_title span {
+    color: var(--color-blue);
+}
+
+.broker_help .broker_description {
+    font-size: var(--font-14);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.broker_help_text {
+    grid-area: text;
+    margin-right: 10px;
+}
+
+.broker_help .box_1 {
+    grid-area: box-1;
+}
+
+.broker_help .box_2 {
+    grid-area: box-2;
+}
+
+.broker_help .box_3 {
+    grid-area: box-3;
+}
+
+.broker_help .box_4 {
+    grid-area: box-4;
 }
 
 
